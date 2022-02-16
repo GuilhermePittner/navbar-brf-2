@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+nav{
+    background-color: #161616;
+    padding: 0.1px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1, p{
+    color: #fff;
+}
+
+.bold{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav, ul{
+    display: flex;
+    flex-direction: row;
+}
+
+li{
+    padding: 0px 20px;
+}
+
+h1{
+    margin: 0;
+    padding: 10px;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 36px;
+
+    /* simplesmente aqui a gente colocou o botão ONDE A GENTE QUIS */
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+
+li:hover, h1:hover, button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+button:focus ~ ul{
+    height: 300px;
+}
+
+@media screen and (max-width: 800px){
+    nav, ul{
+        flex-direction: column;
+    }
+    ul{
+        text-align: center;
+        margin: 0;
+        height: 0;
+    }
+    nav{
+        padding: 0;
+        align-items: flex-start;
+    }
+    h1{
+        margin: 10px;
+    }
+    button{
+        display: flex;
+    }
+    li, ul{
+        width: 100%;
+    }
+}
